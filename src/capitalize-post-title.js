@@ -1,6 +1,7 @@
-class Capitalize {
+class Utils {
 	constructor() {
 		document.getElementById('Capitalize').addEventListener('click', this.capitalize, false);
+		document.getElementById('Replace-Headers').addEventListener('click', this.replaceHeaders, false);
 	}
 	
 	capitalize() {
@@ -28,10 +29,20 @@ class Capitalize {
 		
 		title.value = out;
 	}
+	
+	replaceHeaders() {
+		const input = document.getElementById('content');
+		const content = input.value;
+		
+		const h1Free = content.split('h1').join('strong');
+		const h2Free = h1Free.split('h2').join('strong');
+		const h3Free = h2Free.split('h3').join('strong');
+		const h4Free = h3Free.split('h4').join('strong');
+		const h5Free = h4Free.split('h5').join('strong');
+		const output = h5Free.split('h6').join('strong');
+		
+		input.value = output;
+	}
 }
 
-new Capitalize();
-
-
-
-			
+new Utils();

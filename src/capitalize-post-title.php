@@ -4,7 +4,7 @@
 Plugin Name: Capitalize Post Title
 Plugin URI: https://github.com/rileysun/capitalize-post-title/
 Description: Capitalize post titles with the click of a button
-Version: 1.0
+Version: 1.1
 Author: Riley Lesser
 Author URI: https://sun-sys.tk/
 */
@@ -21,6 +21,9 @@ class Capitalize {
 		echo '
 			<div style="display: block; width: 92%; margin: 1% auto 4%;">
 				<input type="button" id="Capitalize" class="button button-primary button-large" value="Capitalize" />
+			</div>
+			<div style="display: block; width: 92%; margin: 1% auto 4%;">
+				<input type="button" id="Replace-Headers" class="button button-primary button-large" value="Headers" />
 			</div>
 		';
 	}
